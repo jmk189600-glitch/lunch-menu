@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심 메뉴 추천기</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="emoji">🍱</div>
+            <h1>점심 메뉴 추천기</h1>
+            <p>오늘 점심은 뭘 먹을까?</p>
+        </header>
+
+        <section class="recommend-box">
+            <h2>오늘의 추천 메뉴</h2>
+            <div id="recommendResult" aria-live="polite">
+                메뉴를 추천받아 보세요!
+            </div>
+            <button id="recommendBtn" class="recommend-btn">
+                🎲 추천받기
+            </button>
+        </section>
+
+        <section class="menu-section">
+            <h2>📋 메뉴 목록 <span id="menuCount"></span></h2>
+
+            <form id="menuForm">
+                <input
+                    type="text"
+                    id="menuInput"
+                    placeholder="새로운 메뉴 입력"
+                    maxlength="30"
+                    autocomplete="off"
+                    aria-label="추가할 메뉴 이름"
+                >
+                <button type="submit" class="add-btn">추가</button>
+            </form>
+
+            <p id="message" class="message" aria-live="polite"></p>
+
+            <ul id="menuList"></ul>
+
+            <div class="pagination">
+                <button id="prevBtn" type="button" aria-label="이전 메뉴">
+                    ◀ 이전
+                </button>
+
+                <span id="pageInfo">1 / 1</span>
+
+                <button id="nextBtn" type="button" aria-label="다음 메뉴">
+                    다음 ▶
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            맛있는 점심 먹고 좋은 하루 보내세요! 😊
+        </footer>
+    </main>
+</body>
+</html>
